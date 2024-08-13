@@ -1,0 +1,86 @@
+:root{
+    --width:250px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+
+}
+nav{
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 52px;
+    background-color: #222;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+
+    transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+}
+nav:hover{
+    width: var(--width);
+}
+nav .bar{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+nav .user{
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    height: 180px;
+    transform: translateX(-300px);
+    opacity: 0;
+    width: var(--width);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    -webkit-transition: transform 0.3s ease, opacity 0.3s ease;
+    -moz-transition: transform 0.3s ease, opacity 0.3s ease;
+    -ms-transition: transform 0.3s ease, opacity 0.3s ease;
+    -o-transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav .user img{
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+nav:hover .user{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    opacity: 1;
+}
+nav .links a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: var(--width);
+    overflow: hidden;
+}
+nav .links a .icon{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .links a:hover{
+    background-color: rgb(31, 135, 205);
+    color: white;
+}
